@@ -1,5 +1,6 @@
 * 
   box-sizing: border-box
+  margin: 0
 
 .container 
   padding-left: 240px
@@ -14,6 +15,7 @@
   &-nav
     list-style-type: none 
     display: flex
+    margin-top: 18px
   &-logo
     display: flex
     align-items: center
@@ -40,8 +42,53 @@
   line-height: 50px
   letter-spacing: 2px
   color: #FFFFFF
-  margin-top: 4px
   &:not(:last-child)
     margin-right: 76px
 
 // ---------------------------------------- header
+
+.main
+  background-color: #030303
+  background-image: url('/img/welcome.jpg')
+  height: 805px
+  background-repeat: no-repeat
+  background-position: right -13px bottom
+  background-size: 63.5%
+
+.welcome
+  color: #FFFFFF
+  &-title
+    padding-top: 170px
+    font-family: 'Forum', cursive
+    font-weight: normal
+    font-size: 80px
+    line-height: 90px
+    letter-spacing: 5px
+    text-transform: uppercase
+  &-subtitle
+    display: block
+    padding-top: 25px
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 28px
+    line-height: 33px
+    letter-spacing: 2px
+    margin-bottom: 78px
+  &-button
+    padding: 23px 67px
+    font-family: 'Roboto', sans-serif
+    text-decoration: none
+    color: #FFFFFF
+    width: 360px
+    background: #710707
+    border-radius: 10px
+    font-weight: 200
+    font-size: 22px
+    line-height: 26px
+    display: flex
+    align-items: center
+    text-align: center
+    letter-spacing: 2px
+
+// ---------------------------------------- main
