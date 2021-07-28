@@ -3,8 +3,9 @@
   margin: 0
 
 .container 
-  padding-left: 240px
-  padding-right: 222px
+  width: 1440px
+  margin-left: auto
+  margin-right: auto
 
 .header 
   background-color: #030303
@@ -15,7 +16,7 @@
   &-nav
     list-style-type: none 
     display: flex
-    margin-top: 18px
+    margin-top: 19px
   &-logo
     display: flex
     align-items: center
@@ -44,30 +45,34 @@
   color: #FFFFFF
   &:not(:last-child)
     margin-right: 76px
+  &:first-child
+    margin-left: -19px
 
 // ---------------------------------------- header
 
 .main
-  background-color: #030303
-  background-image: url('/img/welcome.jpg')
-  height: 805px
-  background-repeat: no-repeat
-  background-position: right -13px bottom
-  background-size: 63.5%
+  margin-top: -1px
 
 .welcome
   color: #FFFFFF
+  background-color: #030303
+  background-image: url('/img/welcome.jpg')
+  height: 807px
+  background-repeat: no-repeat
+  background-position: right -2px bottom
+  background-size: 63.5%
+  padding-top: 170px
   &-title
-    padding-top: 170px
+    display: block
     font-family: 'Forum', cursive
     font-weight: normal
     font-size: 80px
     line-height: 90px
     letter-spacing: 5px
     text-transform: uppercase
+    margin-bottom: 27px
   &-subtitle
     display: block
-    padding-top: 25px
     font-family: 'Roboto', sans-serif
     font-style: normal
     font-weight: 300
@@ -92,3 +97,48 @@
     letter-spacing: 2px
 
 // ---------------------------------------- main
+
+.visiting
+  padding-top: 75px
+  &-title
+    color: #9D8665
+  &-line
+    height: 2px
+    background: #710707
+    margin-bottom: 73px
+  &-cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.card
+  margin-bottom: 66px
+  &-image
+    margin-bottom: 21px
+  &-title
+    font-size: 32px
+    line-height: 35px
+    font-weight: normal
+    letter-spacing: 5px
+    text-transform: uppercase
+    font-family: 'Forum', cursive
+    margin-bottom: 9px
+  &-line
+    width: 300px
+    background: #710707
+    height: 1px
+    margin-bottom: 9px
+  &-subtitle
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 200
+    font-size: 22px
+    line-height: 26px
+    margin-bottom: 10px
+    &-view
+      font-size: 18px
+      line-height: 21px
+
+
+// ---------------------------------------- visiting
