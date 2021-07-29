@@ -9,6 +9,7 @@
 
 .header 
   background-color: #030303
+  width: 1920px
   &-wrapper
     padding-top: 56px
     display: flex
@@ -52,6 +53,7 @@
 
 .main
   margin-top: -1px
+  width: 1920px
 
 .welcome
   color: #FFFFFF
@@ -70,7 +72,7 @@
     line-height: 90px
     letter-spacing: 5px
     text-transform: uppercase
-    margin-bottom: 27px
+    margin-bottom: 25px
   &-subtitle
     display: block
     font-family: 'Roboto', sans-serif
@@ -103,13 +105,16 @@
   &-title
     color: #9D8665
   &-line
-    height: 2px
-    background: #710707
-    margin-bottom: 73px
+    height: 3px
+    margin-bottom: 75px
   &-cards
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+
+.line
+  background: #710707
+  border: none
 
 .card
   margin-bottom: 66px
@@ -125,9 +130,8 @@
     margin-bottom: 9px
   &-line
     width: 300px
-    background: #710707
-    height: 1px
-    margin-bottom: 9px
+    height: 2px
+    margin-bottom: 11px
   &-subtitle
     display: block
     font-family: 'Roboto', sans-serif
@@ -142,3 +146,95 @@
 
 
 // ---------------------------------------- visiting
+
+.explore 
+  position: relative
+  padding-top: 75px
+  margin-top: -3px
+  background-color: #030303
+  height: 865px
+  &-title 
+    color: #FFFFFF
+  &-line
+    height: 2px
+    width: 660px
+    margin-bottom: 78px
+  &-img
+    position: absolute
+    top: 90px
+    right: 240px
+  &-info
+    width: 655px
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 22px
+    line-height: 38px
+    color: #FFFFFF
+  &-text
+    display: block
+    margin-bottom: 26px
+
+.highlight
+  color: #CAAA7D
+
+// ---------------------------------------- explore
+
+.video
+  padding-top: 90px
+  padding-bottom: 75px
+  &-block 
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 1440px
+    height: 629px
+    background-image: url('../img/video.jpg')
+  &-player
+    display: flex
+    align-items: center
+    background-color: #000
+    width: 1440px
+    height: 85px
+    margin-bottom: 40px
+  &-progress
+    width: 825px
+  &-text
+    display: flex
+  &-subtitle
+    margin-left: 114px
+    margin-top: 8px
+    font-family: 'Roboto', sans-serif
+    display: block
+    font-weight: 300
+    font-size: 22px
+    line-height: 38px
+    width: 720px
+
+.play-btn-big,
+.back-btn,
+.play-btn,
+.forward-btn,
+.video-volume-btn,
+.screen-btn
+  background: transparent
+  border: none
+
+.back-btn
+  margin-left: 35px
+  margin-right: 29px
+
+.play-btn,
+.forward-btn,
+.video-progress
+  margin-right: 31px
+
+.video-volume-btn
+  margin-right: 15px
+
+.volume-progress
+  width: 155px
+  margin-right: 42px
+
+
+// ---------------------------------------- video
