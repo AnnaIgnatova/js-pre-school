@@ -1,6 +1,9 @@
 * 
   box-sizing: border-box
   margin: 0
+.main-wrapper
+  margin-left: auto
+  margin-right: auto
 
 .container 
   width: 1440px
@@ -9,7 +12,7 @@
 
 .header 
   background-color: #030303
-  width: 1920px
+  width: 100%
   &-wrapper
     padding-top: 56px
     display: flex
@@ -53,7 +56,6 @@
 
 .main
   margin-top: -1px
-  width: 1920px
 
 .welcome
   color: #FFFFFF
@@ -182,7 +184,7 @@
 
 .video
   padding-top: 90px
-  padding-bottom: 75px
+  padding-bottom: 50px
   &-block 
     display: flex
     justify-content: center
@@ -236,5 +238,151 @@
   width: 155px
   margin-right: 42px
 
-
 // ---------------------------------------- video
+
+.tickets
+  padding-top: 75px
+  padding-bottom: 75px
+  background-color: #030303
+  &-type-title
+    display: block
+    font-family: 'Roboto', sans-serif
+    margin-bottom: 50px
+    font-weight: bold
+    font-size: 28px
+    line-height: 33px
+    color: #FFFFFF
+  &-wrapper
+    display: flex
+  &-img
+    margin-right: 60px
+  &-buy
+    display: flex
+
+.type
+  &s
+    margin-right: 240px
+    width: 270px
+  &-text
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    color: #FFFFFF
+  &-btn
+    display: block
+    margin-right: 26px
+
+.basic
+  &-number
+    width: 50px
+    height: 50px
+    background: transparent
+    border: 3px solid #FFFFFF
+    border-left: none
+    border-right: none
+    margin-left: -5px
+    color: #fff
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    text-align: center
+  &-wrapper
+    display: flex
+    margin-bottom: 35px
+    &:last-child
+      margin-bottom: 50px
+
+.ticket-type-wrapper
+  margin-bottom: 50px
+  display: flex
+  align-items: center
+
+.amount
+  &-type
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    color: #FFFFFF
+    margin-bottom: 14px
+  &-title
+    display: block
+    margin-left: 50px
+    margin-bottom: 11px
+  &-total
+    letter-spacing: 1.65px
+  &-buy-btn
+    background-color: #FFFFFF
+    border-radius: 2px
+    width: 175px
+    height: 50px
+    font-family: 'Roboto', sans-serif
+    text-align: center
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    letter-spacing: 2px
+    margin-left: -25px
+
+.less-btn,
+.more-btn
+  width: 55px
+  height: 50px
+  background: transparent
+  border: 3px solid #FFFFFF
+  color: #fff
+  font-family: 'Roboto', sans-serif
+  font-weight: normal
+  font-size: 32px
+  line-height: 37px
+  text-align: center
+
+.more-btn
+  border-left: none
+  margin-left: -5px
+  padding-left: 15px
+
+.less-btn
+  border-right: none
+  padding-right: 15px
+
+// ---------------------------------------- tickets
+
+.contacts
+  padding-top: 75px
+  padding-bottom: 75px
+  &-subtitle
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-weight: bold
+    font-size: 28px
+    line-height: 33px
+  &-main-wrapper
+    display: flex
+    justify-content: space-between
+  &-line
+    margin-bottom: 85px
+  &-img
+    margin-top: -10px
+  &-address
+    margin-top: 36px
+
+.address
+  display: block
+  font-style: normal
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 22px
+  line-height: 26px
+  margin-bottom: 20px
+  &-phone,
+  &-mail
+    color: #000
+    text-decoration: none
+  
+
+// ---------------------------------------- contacts
