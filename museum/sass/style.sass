@@ -1,6 +1,15 @@
+$light-bg-color: #fff
+$dark-bg-color: #030303
+$font-gold: #9D8665
+$dark-red: #710707
+$default-video-icon: #B3B3B3
+$hovered-video-icon: #989898
+  
 * 
   box-sizing: border-box
   margin: 0
+
+
 .main-wrapper
   margin-left: auto
   margin-right: auto
@@ -11,7 +20,7 @@
   margin-right: auto
 
 .header 
-  background-color: #030303
+  background-color: $dark-bg-color
   width: 100%
   &-wrapper
     padding-top: 56px
@@ -24,6 +33,11 @@
   &-logo
     display: flex
     align-items: center
+    cursor: pointer
+  .nav-item
+    &:not(:last-child)
+      margin-right: 76px
+
 
 .logo
   &-text
@@ -47,11 +61,12 @@
   line-height: 50px
   letter-spacing: 2px
   color: #FFFFFF
-  &:not(:last-child)
-    margin-right: 76px
+  cursor: pointer
+  transition-duration: .2s
+  &:hover
+    color: $font-gold
   &:first-child
     margin-left: -19px
-
 // ---------------------------------------- header
 
 .main
@@ -59,7 +74,7 @@
 
 .welcome
   color: #FFFFFF
-  background-color: #030303
+  background-color: $dark-bg-color
   background-image: url('../img/welcome.jpg')
   height: 807px
   background-repeat: no-repeat
@@ -90,7 +105,7 @@
     text-decoration: none
     color: #FFFFFF
     width: 360px
-    background: #710707
+    background-color: $dark-red
     border-radius: 10px
     font-weight: 200
     font-size: 22px
@@ -99,13 +114,16 @@
     align-items: center
     text-align: center
     letter-spacing: 2px
+    transition-duration: .2s
+    &:hover
+      background-color: $font-gold
 
-// ---------------------------------------- main
+// ---------------------------------------- welcome
 
 .visiting
   padding-top: 75px
   &-title
-    color: #9D8665
+    color: $font-gold
   &-line
     height: 3px
     margin-bottom: 75px
@@ -115,11 +133,16 @@
     justify-content: space-between
 
 .line
-  background: #710707
+  background-color: $dark-red
   border: none
 
 .card
   margin-bottom: 66px
+  &:hover
+    .card-line
+      width: 100%
+    .card-title
+      color: $font-gold
   &-image
     margin-bottom: 21px
   &-title
@@ -134,6 +157,7 @@
     width: 300px
     height: 2px
     margin-bottom: 11px
+    transition-duration: .5s
   &-subtitle
     display: block
     font-family: 'Roboto', sans-serif
@@ -153,7 +177,7 @@
   position: relative
   padding-top: 75px
   margin-top: -3px
-  background-color: #030303
+  background-color: $dark-bg-color
   height: 865px
   &-title 
     color: #FFFFFF
@@ -165,6 +189,9 @@
     position: absolute
     top: 90px
     right: 240px
+    transition-duration: .4s
+    &:hover
+      transform: scale(1.05)
   &-info
     width: 655px
     font-family: 'Roboto', sans-serif
@@ -181,6 +208,16 @@
   color: #CAAA7D
 
 // ---------------------------------------- explore
+
+  input[type=range]::-webkit-slider-thumb 
+    background-color: #fff
+  
+  input[type=range]::-moz-range-thumb 
+    background-color: #fff
+  
+  input[type=range]::-ms-thumb 
+    background-color: #fff
+  
 
 .video
   padding-top: 90px
@@ -212,6 +249,10 @@
     font-size: 22px
     line-height: 38px
     width: 720px
+  &-icon
+    fill: $default-video-icon
+    &:hover
+      fill: $hovered-video-icon
 
 .play-btn-big,
 .back-btn,
@@ -221,6 +262,7 @@
 .screen-btn
   background: transparent
   border: none
+  cursor: pointer
 
 .back-btn
   margin-left: 35px
@@ -243,7 +285,7 @@
 .tickets
   padding-top: 75px
   padding-bottom: 75px
-  background-color: #030303
+  background-color: $dark-bg-color
   &-type-title
     display: block
     font-family: 'Roboto', sans-serif
@@ -256,6 +298,9 @@
     display: flex
   &-img
     margin-right: 60px
+    transition-duration: .4s
+    &:hover
+      transform: scale(1.05)
   &-buy
     display: flex
 
@@ -327,6 +372,11 @@
     line-height: 26px
     letter-spacing: 2px
     margin-left: -25px
+    transition-duration: .2s
+    border: none
+    cursor: pointer
+    &:hover
+      background-color: $font-gold
 
 .less-btn,
 .more-btn
@@ -340,6 +390,7 @@
   font-size: 32px
   line-height: 37px
   text-align: center
+  cursor: pointer
 
 .more-btn
   border-left: none
@@ -369,7 +420,7 @@
   &-img
     margin-top: -10px
   &-address
-    margin-top: 36px
+    margin-top: 38px
 
 .address
   display: block
@@ -386,3 +437,63 @@
   
 
 // ---------------------------------------- contacts
+
+.footer
+  background-color: $dark-bg-color
+  padding-top: 75px
+  padding-bottom: 75px
+  &-container
+    display: flex
+  &-nav
+    flex-direction: column
+    flex-wrap: wrap
+    height: 150px
+    width: 366px
+    padding: 0
+    margin-top: 1px
+  &-nav-links
+    margin-right: 355px
+  .nav-item:first-child
+    margin-left: 0
+  &-logo
+    margin-right: 145px
+    align-items: flex-start
+    .logo-icon
+      margin-bottom: 0
+      margin-top: 4px
+  &-social-nav
+    display: flex
+    list-style-type: none
+    margin-left: 4px
+  &-nav-menu
+    display: flex
+    justify-content: flex-end
+  
+.space
+  margin-right: 153px
+
+.social
+  &-item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 48px
+    height: 48px
+    border: 1px solid #666666
+    filter: drop-shadow(0px 0px 0px #666666)
+    border-radius: 50%
+    transition-duration: .2s
+    cursor: pointer
+    &:not(:last-child)
+      margin-right: 24px
+    &:hover
+      border-color: $font-gold
+      filter: drop-shadow(0px 0px 0px $font-gold)
+      .social-icon
+        fill: $font-gold
+  &-icon
+    fill: #fff
+      
+
+
+// ---------------------------------------- footer
