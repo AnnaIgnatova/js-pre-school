@@ -4,22 +4,23 @@ $font-gold: #9D8665
 $dark-red: #710707
 $default-video-icon: #B3B3B3
 $hovered-video-icon: #989898
-  
-* 
+
+*
   box-sizing: border-box
   margin: 0
-
+html
+  scroll-behavior: smooth
 
 .main-wrapper
   margin-left: auto
   margin-right: auto
 
-.container 
+.container
   width: 1440px
   margin-left: auto
   margin-right: auto
 
-.header 
+.header
   background-color: $dark-bg-color
   width: 100%
   &-wrapper
@@ -27,13 +28,13 @@ $hovered-video-icon: #989898
     display: flex
     justify-content: space-between
   &-nav
-    list-style-type: none 
+    list-style-type: none
     display: flex
     margin-top: 19px
   &-logo
     display: flex
     align-items: center
-    cursor: pointer
+    text-decoration: none
   .nav-item
     &:not(:last-child)
       margin-right: 76px
@@ -54,7 +55,7 @@ $hovered-video-icon: #989898
     margin-bottom: 8px
 
 .nav
-  &-item 
+  &-item
     font-family: 'Roboto', sans-serif
     font-weight: 200
     font-size: 22px
@@ -68,6 +69,8 @@ $hovered-video-icon: #989898
     color: #fff
     &:hover
       color: $font-gold
+    &:active
+      color: $font-gold
 // ---------------------------------------- header
 
 .main
@@ -76,12 +79,17 @@ $hovered-video-icon: #989898
 .welcome
   color: #FFFFFF
   background-color: $dark-bg-color
-  background-image: url('../img/welcome.jpg')
-  height: 807px
-  background-repeat: no-repeat
-  background-position: right -2px bottom
-  background-size: 63.5%
-  padding-top: 170px
+
+  &-bg
+    margin-left: auto
+    margin-right: auto
+    padding-top: 170px
+    width: 1920px
+    background-image: url('../img/welcome.jpg')
+    height: 807px
+    background-repeat: no-repeat
+    background-position: right -2px bottom
+    background-size: 63.5%
   &-title
     display: block
     font-family: 'Forum', cursive
@@ -117,6 +125,8 @@ $hovered-video-icon: #989898
     letter-spacing: 2px
     transition-duration: .2s
     &:hover
+      background-color: $font-gold
+    &:active
       background-color: $font-gold
 
 // ---------------------------------------- welcome
@@ -171,25 +181,26 @@ $hovered-video-icon: #989898
       font-size: 18px
       line-height: 21px
 
-
 // ---------------------------------------- visiting
 
-.explore 
-  position: relative
+.explore
   padding-top: 75px
   margin-top: -3px
   background-color: $dark-bg-color
   height: 865px
-  &-title 
+  &-title
     color: #FFFFFF
   &-line
     height: 2px
     width: 660px
     margin-bottom: 78px
+  &-wrapper
+    display: flex
+  &-content
+    margin-right: 60px
   &-img
-    position: absolute
-    top: 90px
-    right: 240px
+    display: block
+    margin-top: 15px
     transition-duration: .4s
     &:hover
       transform: scale(1.05)
@@ -210,20 +221,19 @@ $hovered-video-icon: #989898
 
 // ---------------------------------------- explore
 
-  input[type=range]::-webkit-slider-thumb 
+  input[type=range]::-webkit-slider-thumb
     background-color: #fff
-  
-  input[type=range]::-moz-range-thumb 
+
+  input[type=range]::-moz-range-thumb
     background-color: #fff
-  
-  input[type=range]::-ms-thumb 
+
+  input[type=range]::-ms-thumb
     background-color: #fff
-  
 
 .video
   padding-top: 90px
   padding-bottom: 50px
-  &-block 
+  &-block
     display: flex
     justify-content: center
     align-items: center
@@ -378,6 +388,8 @@ $hovered-video-icon: #989898
     cursor: pointer
     &:hover
       background-color: $font-gold
+    &:active
+      background-color: $font-gold
 
 .less-btn,
 .more-btn
@@ -402,7 +414,37 @@ $hovered-video-icon: #989898
   border-right: none
   padding-right: 15px
 
-// ---------------------------------------- tickets
+.ticket-type-wrapper input[type=radio]
+  display: none
+
+.ticket-type-wrapper label
+  display: inline-block
+  cursor: pointer
+  position: relative
+  padding-left: 25px
+  margin-right: 0
+  line-height: 18px
+  user-select: none
+  margin-top: 7px
+  margin-left: 12px
+
+.ticket-type-wrapper label:before
+  content: ""
+  display: block
+  width: 17px
+  height: 17px
+  position: absolute
+  left: 0
+  bottom: 1px
+  border-radius: 50%
+  border: 2px solid #fff
+  margin-left: -12px
+
+.ticket-type-wrapper input[type=radio]:checked + label:before
+  border: none
+  background: url('../img/checked.svg') 0 0 no-repeat
+
+// ------------------------ tickets
 
 .contacts
   padding-top: 75px
@@ -435,7 +477,6 @@ $hovered-video-icon: #989898
   &-mail
     color: #000
     text-decoration: none
-  
 
 // ---------------------------------------- contacts
 
@@ -468,7 +509,7 @@ $hovered-video-icon: #989898
     list-style-type: none
     margin-left: 4px
     margin-bottom: 15px
-  
+
 .space
   margin-right: 153px
 
@@ -493,7 +534,5 @@ $hovered-video-icon: #989898
         fill: $font-gold
   &-icon
     fill: #fff
-      
-
 
 // ---------------------------------------- footer

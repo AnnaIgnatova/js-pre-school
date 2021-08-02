@@ -15,26 +15,26 @@
       <header class="header">
         <div class="container">
           <div class="header-wrapper">
-            <a class="header-logo">
+            <a href="index.html" class="header-logo">
               <img src="img/logo.svg" alt="Logo: louvre" class="logo-icon">
               <h1 class="logo-text">Louvre</h1>
             </a>
             <nav class="header-nav-menu">
               <ul class="header-nav">
                 <li class="nav-item">
-                  <a class="nav-li-link" href="#">Visiting</a>
+                  <a class="nav-li-link" href="#visiting">Visiting</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-li-link" href="#">Explore</a>
+                  <a class="nav-li-link" href="#explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-li-link" href="#">Video</a>
+                  <a class="nav-li-link" href="#video">Video</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-li-link" href="#">Tickets</a>
+                  <a class="nav-li-link" href="#tickets">Tickets</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-li-link" href="#">Contacts</a>
+                  <a class="nav-li-link" href="#contacts">Contacts</a>
                 </li>
               </ul>
             </nav>
@@ -42,14 +42,16 @@
         </div>
       </header>
       <main class="main">
-        <section class="welcome">
-          <div class="container">
-            <h2 class="welcome-title">Welcome<br>to the Louvre</h2>
-            <span class="welcome-subtitle">From the castle to the museum</span>
-            <a href="#" class="welcome-button">Discover the Louvre</a>
+        <section class="welcome" id="welcome">
+          <div class="welcome-bg">
+            <div class="container">
+              <h2 class="welcome-title">Welcome<br>to the Louvre</h2>
+              <span class="welcome-subtitle">From the castle to the museum</span>
+              <a href="#" class="welcome-button">Discover the Louvre</a>
+            </div>
           </div>
         </section>
-        <section class="visiting">
+        <section class="visiting" id="visiting">
           <div class="container">
             <h2 class="welcome-title visiting-title">Virtual tour</h2>
             <hr class="line visiting-line">
@@ -99,19 +101,21 @@
             </div>
           </div>
         </section>  
-        <section class="explore">
-          <div class="container">
-            <h2 class="welcome-title explore-title">Picture explore</h2>
-            <hr class="line explore-line">
-            <div class="explore-info">
-              <span class="explore-text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</span>
-              <span class="explore-text">It was cleaned in 1984 to remove a <span class="highlight">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</span>
-              <span class="explore-text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</span>
-            </div>
+        <section class="explore" id="explore">
+          <div class="container explore-wrapper">
+            <div class="explore-content">
+              <h2 class="welcome-title explore-title">Picture explore</h2>
+              <hr class="line explore-line">
+              <div class="explore-info">
+                <span class="explore-text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</span>
+                <span class="explore-text">It was cleaned in 1984 to remove a <span class="highlight">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</span>
+                <span class="explore-text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</span>
+              </div>
+            </div>     
             <img src="img/explore.jpg" alt="explore image" class="explore-img">
           </div>
         </section>
-        <section class="video">
+        <section class="video" id="video">
           <div class="container">
             <div class="video-block">
               <button class="play-btn-big">
@@ -164,7 +168,7 @@
             </div>
           </div>
         </section>
-        <section class="tickets">
+        <section class="tickets" id="tickets">
           <div class="container">
             <h2 class="welcome-title explore-title">Buy tickets</h2>
             <hr class="line visiting-line">
@@ -174,16 +178,16 @@
                 <div class="types">
                   <span class="tickets-type-title">Ticket Type</span>
                   <div class="ticket-type-wrapper">
-                    <input type="radio" class="type-btn" checked>
-                    <span class="type-text">Permanent exhibition</span>
+                    <input id="radio-1" type="radio" name="radio" class="type-btn" value="1" checked>
+                    <label for="radio-1" class="type-text">Permanent exhibition</label>
                   </div>
                   <div class="ticket-type-wrapper">
-                    <input type="radio" class="type-btn">
-                    <span class="type-text">Temporary exhibition</span>
+                    <input id="radio-2" type="radio" name="radio" class="type-btn" value="2">
+                    <label for="radio-2" class="type-text">Temporary exhibition</label>
                   </div>
                   <div class="ticket-type-wrapper">
-                    <input type="radio" class="type-btn">
-                    <span class="type-text">Combined Admission</span>
+                    <input id="radio-3" type="radio" name="radio" class="type-btn" value="3">
+                    <label for="radio-3" class="type-text">Combined Admission</label>
                   </div>
                 </div>
                 <div class="amount">
@@ -209,7 +213,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container">
             <h2 class="welcome-title visiting-title">Contacts</h2>
             <hr class="line visiting-line contacts-line">
@@ -230,29 +234,29 @@
       </main>
       <footer class="footer">
         <div class="container footer-container">
-          <a class="header-logo footer-logo">
+          <a href="./index.html" class="header-logo footer-logo">
             <img src="img/logo.svg" alt="Logo: louvre" class="logo-icon">
             <span class="logo-text">Louvre</span>
           </a>
           <nav class="header-nav-menu footer-nav-links">
             <ul class="header-nav footer-nav">
               <li class="nav-item space">
-                <a class="nav-li-link" href="#">Welcome</a>
+                <a class="nav-li-link" href="#welcome">Welcome</a>
               </li>
               <li class="nav-item space">
-                <a class="nav-li-link" href="#">Visiting</a>
+                <a class="nav-li-link" href="#visiting">Visiting</a>
               </li>
               <li class="nav-item space">
-                <a class="nav-li-link" href="#">Explore</a>
+                <a class="nav-li-link" href="#explore">Explore</a>
               </li>
               <li class="nav-item">
-                <a class="nav-li-link" href="#">Video</a>
+                <a class="nav-li-link" href="#video">Video</a>
               </li>
               <li class="nav-item">
-                <a class="nav-li-link" href="#">Tickets</a>
+                <a class="nav-li-link" href="#tickets">Tickets</a>
               </li>
               <li class="nav-item">
-                <a class="nav-li-link" href="#">Contacts</a>
+                <a class="nav-li-link" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
