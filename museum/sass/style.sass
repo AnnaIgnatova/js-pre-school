@@ -1,6 +1,18 @@
+$light-bg-color: #fff
+$dark-bg-color: #030303
+$font-gold: #9D8665
+$dark-red: #710707
+$default-video-icon: #B3B3B3
+$hovered-video-icon: #989898
+  
 * 
   box-sizing: border-box
   margin: 0
+
+
+.main-wrapper
+  margin-left: auto
+  margin-right: auto
 
 .container 
   width: 1440px
@@ -8,7 +20,8 @@
   margin-right: auto
 
 .header 
-  background-color: #030303
+  background-color: $dark-bg-color
+  width: 100%
   &-wrapper
     padding-top: 56px
     display: flex
@@ -20,6 +33,11 @@
   &-logo
     display: flex
     align-items: center
+    cursor: pointer
+  .nav-item
+    &:not(:last-child)
+      margin-right: 76px
+
 
 .logo
   &-text
@@ -43,11 +61,12 @@
   line-height: 50px
   letter-spacing: 2px
   color: #FFFFFF
-  &:not(:last-child)
-    margin-right: 76px
+  cursor: pointer
+  transition-duration: .2s
+  &:hover
+    color: $font-gold
   &:first-child
     margin-left: -19px
-
 // ---------------------------------------- header
 
 .main
@@ -55,7 +74,7 @@
 
 .welcome
   color: #FFFFFF
-  background-color: #030303
+  background-color: $dark-bg-color
   background-image: url('../img/welcome.jpg')
   height: 807px
   background-repeat: no-repeat
@@ -70,7 +89,7 @@
     line-height: 90px
     letter-spacing: 5px
     text-transform: uppercase
-    margin-bottom: 27px
+    margin-bottom: 25px
   &-subtitle
     display: block
     font-family: 'Roboto', sans-serif
@@ -86,7 +105,7 @@
     text-decoration: none
     color: #FFFFFF
     width: 360px
-    background: #710707
+    background-color: $dark-red
     border-radius: 10px
     font-weight: 200
     font-size: 22px
@@ -95,24 +114,35 @@
     align-items: center
     text-align: center
     letter-spacing: 2px
+    transition-duration: .2s
+    &:hover
+      background-color: $font-gold
 
-// ---------------------------------------- main
+// ---------------------------------------- welcome
 
 .visiting
   padding-top: 75px
   &-title
-    color: #9D8665
+    color: $font-gold
   &-line
-    height: 2px
-    background: #710707
-    margin-bottom: 73px
+    height: 3px
+    margin-bottom: 75px
   &-cards
     display: flex
     flex-wrap: wrap
     justify-content: space-between
 
+.line
+  background-color: $dark-red
+  border: none
+
 .card
   margin-bottom: 66px
+  &:hover
+    .card-line
+      width: 100%
+    .card-title
+      color: $font-gold
   &-image
     margin-bottom: 21px
   &-title
@@ -125,9 +155,9 @@
     margin-bottom: 9px
   &-line
     width: 300px
-    background: #710707
-    height: 1px
-    margin-bottom: 9px
+    height: 2px
+    margin-bottom: 11px
+    transition-duration: .5s
   &-subtitle
     display: block
     font-family: 'Roboto', sans-serif
@@ -142,3 +172,328 @@
 
 
 // ---------------------------------------- visiting
+
+.explore 
+  position: relative
+  padding-top: 75px
+  margin-top: -3px
+  background-color: $dark-bg-color
+  height: 865px
+  &-title 
+    color: #FFFFFF
+  &-line
+    height: 2px
+    width: 660px
+    margin-bottom: 78px
+  &-img
+    position: absolute
+    top: 90px
+    right: 240px
+    transition-duration: .4s
+    &:hover
+      transform: scale(1.05)
+  &-info
+    width: 655px
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 22px
+    line-height: 38px
+    color: #FFFFFF
+  &-text
+    display: block
+    margin-bottom: 26px
+
+.highlight
+  color: #CAAA7D
+
+// ---------------------------------------- explore
+
+  input[type=range]::-webkit-slider-thumb 
+    background-color: #fff
+  
+  input[type=range]::-moz-range-thumb 
+    background-color: #fff
+  
+  input[type=range]::-ms-thumb 
+    background-color: #fff
+  
+
+.video
+  padding-top: 90px
+  padding-bottom: 50px
+  &-block 
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 1440px
+    height: 629px
+    background-image: url('../img/video.jpg')
+  &-player
+    display: flex
+    align-items: center
+    background-color: #000
+    width: 1440px
+    height: 85px
+    margin-bottom: 40px
+  &-progress
+    width: 825px
+  &-text
+    display: flex
+  &-subtitle
+    margin-left: 114px
+    margin-top: 8px
+    font-family: 'Roboto', sans-serif
+    display: block
+    font-weight: 300
+    font-size: 22px
+    line-height: 38px
+    width: 720px
+  &-icon
+    fill: $default-video-icon
+    &:hover
+      fill: $hovered-video-icon
+
+.play-btn-big,
+.back-btn,
+.play-btn,
+.forward-btn,
+.video-volume-btn,
+.screen-btn
+  background: transparent
+  border: none
+  cursor: pointer
+
+.back-btn
+  margin-left: 35px
+  margin-right: 29px
+
+.play-btn,
+.forward-btn,
+.video-progress
+  margin-right: 31px
+
+.video-volume-btn
+  margin-right: 15px
+
+.volume-progress
+  width: 155px
+  margin-right: 42px
+
+// ---------------------------------------- video
+
+.tickets
+  padding-top: 75px
+  padding-bottom: 75px
+  background-color: $dark-bg-color
+  &-type-title
+    display: block
+    font-family: 'Roboto', sans-serif
+    margin-bottom: 50px
+    font-weight: bold
+    font-size: 28px
+    line-height: 33px
+    color: #FFFFFF
+  &-wrapper
+    display: flex
+  &-img
+    margin-right: 60px
+    transition-duration: .4s
+    &:hover
+      transform: scale(1.05)
+  &-buy
+    display: flex
+
+.type
+  &s
+    margin-right: 240px
+    width: 270px
+  &-text
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    color: #FFFFFF
+  &-btn
+    display: block
+    margin-right: 26px
+
+.basic
+  &-number
+    width: 50px
+    height: 50px
+    background: transparent
+    border: 3px solid #FFFFFF
+    border-left: none
+    border-right: none
+    margin-left: -5px
+    color: #fff
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    text-align: center
+  &-wrapper
+    display: flex
+    margin-bottom: 35px
+    &:last-child
+      margin-bottom: 50px
+
+.ticket-type-wrapper
+  margin-bottom: 50px
+  display: flex
+  align-items: center
+
+.amount
+  &-type
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    color: #FFFFFF
+    margin-bottom: 14px
+  &-title
+    display: block
+    margin-left: 50px
+    margin-bottom: 11px
+  &-total
+    letter-spacing: 1.65px
+  &-buy-btn
+    background-color: #FFFFFF
+    border-radius: 2px
+    width: 175px
+    height: 50px
+    font-family: 'Roboto', sans-serif
+    text-align: center
+    font-weight: 300
+    font-size: 22px
+    line-height: 26px
+    letter-spacing: 2px
+    margin-left: -25px
+    transition-duration: .2s
+    border: none
+    cursor: pointer
+    &:hover
+      background-color: $font-gold
+
+.less-btn,
+.more-btn
+  width: 55px
+  height: 50px
+  background: transparent
+  border: 3px solid #FFFFFF
+  color: #fff
+  font-family: 'Roboto', sans-serif
+  font-weight: normal
+  font-size: 32px
+  line-height: 37px
+  text-align: center
+  cursor: pointer
+
+.more-btn
+  border-left: none
+  margin-left: -5px
+  padding-left: 15px
+
+.less-btn
+  border-right: none
+  padding-right: 15px
+
+// ---------------------------------------- tickets
+
+.contacts
+  padding-top: 75px
+  padding-bottom: 75px
+  &-subtitle
+    display: block
+    font-family: 'Roboto', sans-serif
+    font-weight: bold
+    font-size: 28px
+    line-height: 33px
+  &-main-wrapper
+    display: flex
+    justify-content: space-between
+  &-line
+    margin-bottom: 85px
+  &-img
+    margin-top: -10px
+  &-address
+    margin-top: 38px
+
+.address
+  display: block
+  font-style: normal
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 22px
+  line-height: 26px
+  margin-bottom: 20px
+  &-phone,
+  &-mail
+    color: #000
+    text-decoration: none
+  
+
+// ---------------------------------------- contacts
+
+.footer
+  background-color: $dark-bg-color
+  padding-top: 75px
+  padding-bottom: 75px
+  &-container
+    display: flex
+  &-nav
+    flex-direction: column
+    flex-wrap: wrap
+    height: 150px
+    width: 366px
+    padding: 0
+    margin-top: 1px
+  &-nav-links
+    margin-right: 355px
+  .nav-item:first-child
+    margin-left: 0
+  &-logo
+    margin-right: 145px
+    align-items: flex-start
+    .logo-icon
+      margin-bottom: 0
+      margin-top: 4px
+  &-social-nav
+    display: flex
+    list-style-type: none
+    margin-left: 4px
+  &-nav-menu
+    display: flex
+    justify-content: flex-end
+  
+.space
+  margin-right: 153px
+
+.social
+  &-item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 48px
+    height: 48px
+    border: 1px solid #666666
+    filter: drop-shadow(0px 0px 0px #666666)
+    border-radius: 50%
+    transition-duration: .2s
+    cursor: pointer
+    &:not(:last-child)
+      margin-right: 24px
+    &:hover
+      border-color: $font-gold
+      filter: drop-shadow(0px 0px 0px $font-gold)
+      .social-icon
+        fill: $font-gold
+  &-icon
+    fill: #fff
+      
+
+
+// ---------------------------------------- footer
