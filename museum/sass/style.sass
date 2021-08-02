@@ -38,7 +38,6 @@ $hovered-video-icon: #989898
     &:not(:last-child)
       margin-right: 76px
 
-
 .logo
   &-text
     font-family: 'Forum', cursive
@@ -54,19 +53,21 @@ $hovered-video-icon: #989898
     margin-right: 20px
     margin-bottom: 8px
 
-.nav-item 
-  font-family: 'Roboto', sans-serif
-  font-weight: 200
-  font-size: 22px
-  line-height: 50px
-  letter-spacing: 2px
-  color: #FFFFFF
-  cursor: pointer
-  transition-duration: .2s
-  &:hover
-    color: $font-gold
-  &:first-child
-    margin-left: -19px
+.nav
+  &-item 
+    font-family: 'Roboto', sans-serif
+    font-weight: 200
+    font-size: 22px
+    line-height: 50px
+    letter-spacing: 2px
+    transition-duration: .2s
+    &:first-child
+      margin-left: -19px
+  &-li-link
+    text-decoration: none
+    color: #fff
+    &:hover
+      color: $font-gold
 // ---------------------------------------- header
 
 .main
@@ -463,11 +464,10 @@ $hovered-video-icon: #989898
       margin-top: 4px
   &-social-nav
     display: flex
+    align-items: flex-end
     list-style-type: none
     margin-left: 4px
-  &-nav-menu
-    display: flex
-    justify-content: flex-end
+    margin-bottom: 15px
   
 .space
   margin-right: 153px
