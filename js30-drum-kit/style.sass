@@ -3,14 +3,73 @@
   margin: 0
 
 .container
-  height: 100vh
   background-image: url('../img/background.jpg')
+  background-position: bottom
+  background-size: 100%
+  transition: 0.3s
+.theme
+  position: absolute
+  right: 70px
+  bottom: 50px
+
+.switch
+  position: relative
+  display: inline-block
+  overflow: hidden
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  border: 1px solid #838383
+  animation: animateTheme 1s infinite
+  & input
+    display: none
+
+@keyframes animateTheme
+  from
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4)
+  to
+    box-shadow: 0px 0px 15px 20px rgba(255, 255, 255, 0.1)
+
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: transparent
+  transition: .2s
+  &:before
+    display: block
+    margin-bottom: 5px
+    margin-left: 5px
+    position: absolute
+    content: ""
+    height: 50px
+    width: 50px
+    left: 4px
+    bottom: 4px
+    background-image: url('../img/light.png')
+    background-size: contain
+    transition: .5s
+  input:checked + &
+    margin-top: 7px
+    margin-left: 7px
+    height: 50px
+    width: 50px
+    background-size: contain
+    background-image: url('../img/dark.png')
+  input:focus + &
+    box-shadow: 0 0 1px #fff
+  input:checked + &:before
+    display: none
+
+.letters
+  height: 100vh
   display: flex
   justify-content: center
   align-items: center
   font-family: sans-serif
-  background-position: bottom
-  background-size: 100%
 
 .letter
   font-size: 40px
@@ -29,7 +88,8 @@
     margin: 10px
     transition-duration: .3s
     &.active
-      border-color: #ffc600
+      border-color: #ffc600 !important
+      box-shadow: 0 0 5px #ffc600
       transform: scale(1.1)
   &-sound
     font-size: 12px
@@ -40,7 +100,8 @@
   height: 60px
   width: 60px
   background-image: url('../img/music.png')
-  animation: animateIcon 1s 
+  background-size: contain
+  animation: animateIcon 1s
 
 @keyframes animateIcon
   from
