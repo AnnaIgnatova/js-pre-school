@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Drum Kit</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="theme">
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="letters">
+        <div class="letter-wrapper" data-code="65">
+          <span class="letter">a</span>
+          <span class="letter-sound">clap</span>
+        </div>
+        <div class="letter-wrapper" data-code="83">
+          <span class="letter">s</span>
+          <span class="letter-sound">hihat</span>
+        </div>
+        <div class="letter-wrapper" data-code="68">
+          <span class="letter">d</span>
+          <span class="letter-sound">kick</span>
+        </div>
+        <div class="letter-wrapper" data-code="70">
+          <span class="letter">f</span>
+          <span class="letter-sound">openhat</span>
+        </div>
+        <div class="letter-wrapper" data-code="71">
+          <span class="letter">g</span>
+          <span class="letter-sound">boom</span>
+        </div>
+        <div class="letter-wrapper" data-code="72">
+          <span class="letter">h</span>
+          <span class="letter-sound">ride</span>
+        </div>
+        <div class="letter-wrapper" data-code="74">
+          <span class="letter">j</span>
+          <span class="letter-sound">snare</span>
+        </div>
+        <div class="letter-wrapper" data-code="75">
+          <span class="letter">k</span>
+          <span class="letter-sound">tom</span>
+        </div>
+        <div class="letter-wrapper" data-code="76">
+          <span class="letter">l</span>
+          <span class="letter-sound">tink</span>
+        </div>
+      </div>
+    </div>
+
+    <audio src="sounds/clap.wav" type="audio/wav" id="65"></audio>
+    <audio src="sounds/hihat.wav" type="audio/wav" id="83"></audio>
+    <audio src="sounds/kick.wav" type="audio/wav" id="68"></audio>
+    <audio src="sounds/openhat.wav" type="audio/wav" id="70"></audio>
+    <audio src="sounds/boom.wav" type="audio/wav" id="71"></audio>
+    <audio src="sounds/ride.wav" type="audio/wav" id="72"></audio>
+    <audio src="sounds/snare.wav" type="audio/wav" id="74"></audio>
+    <audio src="sounds/tom.wav" type="audio/wav" id="75"></audio>
+    <audio src="sounds/tink.wav" type="audio/wav" id="76"></audio>
+
+    <script src="main.js"></script>
+  </body>
+</html>

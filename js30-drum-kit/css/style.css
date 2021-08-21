@@ -1,0 +1,202 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  background-image: url("../img/background.jpg");
+  background-position: bottom;
+  background-size: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.theme {
+  position: absolute;
+  right: 70px;
+  bottom: 50px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #838383;
+  -webkit-animation: animateTheme 1s infinite;
+          animation: animateTheme 1s infinite;
+}
+
+.switch input {
+  display: none;
+}
+
+@-webkit-keyframes animateTheme {
+  from {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 15px 20px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 15px 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes animateTheme {
+  from {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+            box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 15px 20px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 15px 20px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:before {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url("../img/light.png");
+  background-size: contain;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+input:checked + .slider {
+  margin-top: 7px;
+  margin-left: 7px;
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  background-image: url("../img/dark.png");
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #fff;
+          box-shadow: 0 0 1px #fff;
+}
+
+input:checked + .slider:before {
+  display: none;
+}
+
+.letters {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+}
+
+.letter {
+  font-size: 40px;
+}
+
+.letter-wrapper {
+  width: 118px;
+  height: 92px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  border: 4px solid #000;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+.letter-wrapper.active {
+  border-color: #ffc600 !important;
+  -webkit-box-shadow: 0 0 5px #ffc600;
+          box-shadow: 0 0 5px #ffc600;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.letter-sound {
+  font-size: 12px;
+  color: #ffc600;
+}
+
+.music-icon {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-image: url("../img/music.png");
+  background-size: contain;
+  -webkit-animation: animateIcon 1s;
+          animation: animateIcon 1s;
+}
+
+@-webkit-keyframes animateIcon {
+  from {
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    top: -50px;
+    left: 50px;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.5;
+  }
+}
+
+@keyframes animateIcon {
+  from {
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    top: -50px;
+    left: 50px;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0.5;
+  }
+}
