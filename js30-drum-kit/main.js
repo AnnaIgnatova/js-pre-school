@@ -47,13 +47,13 @@ const playSoundClick = (e) => {
 
 const changeTheme = (checked) => {
   if (!switcher.querySelector('input').checked) {
-    container.style.backgroundImage = "url('../img/background.jpg')"
+    container.style.backgroundImage = "url('./img/background.jpg')"
     soundBlocks.forEach(block => {
       block.style.border = '3px solid #000';
       block.style.background = 'rgba(0, 0, 0, 0.4)';
     })
   } else {
-    container.style.backgroundImage = "url('../img/background-dark.png')" 
+    container.style.backgroundImage = "url('./img/background-dark.png')" 
     soundBlocks.forEach(block => {
       block.style.border = '2px solid #fff';
       block.style.background = 'rgba(255, 255, 255, 0.05)';
