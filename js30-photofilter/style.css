@@ -93,9 +93,9 @@
   transform: scale(1.1);
 }
 .filter-img {
-  background-image: url("./img/small-pic.jpg");
+  background-image: url("./img/big-images/1.jpg");
   background-size: cover;
-  background-position: right;
+  background-position: center;
   display: block;
   width: 100px;
   height: 100px;
