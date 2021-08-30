@@ -3,6 +3,7 @@ const resetBtn = document.querySelector(".reset-button");
 const nextBtn = document.querySelector(".next-button");
 const filtersImg = document.querySelectorAll(".small-img-wrapper");
 const img = document.querySelector(".main-img");
+const filterImages = document.querySelectorAll(".filter-img");
 
 let index = 1;
 
@@ -139,9 +140,15 @@ const changeFilters = (e) => {
 };
 
 const changeImage = () => {
-  resetFilters(); 
+  resetFilters();
+
   index++;
   img.style.backgroundImage = `url("./img/big-images/${index}.jpg")`;
+
+  filterImages.forEach((image) => {
+    image.style.backgroundImage = `url("./img/big-images/${index}.jpg")`;
+  });
+
   if (index === 8) {
     index = 1;
   }
@@ -157,3 +164,8 @@ filtersImg.forEach((img) => {
 
 resetBtn.addEventListener("click", resetFilters);
 nextBtn.addEventListener("click", changeImage);
+
+console.log(`Score: 30 / 30
+Разобраться в коде чужого проекта, понять его, воспроизвести исходное приложение. Правки и изменения допускаются и приветствуются, если они не ухудшают внешний вид и функционал исходного проекта (10 баллов)
+Дополнить исходный проект обязательным дополнительным функционалом, указанным в описании задания. Обязательный дополнительный функционал включает в себя дополнительные фильтры и пресеты - фото, к которым применён наборы фильтров. При выборе миниатюры пресета такие же фильтры применяются к основному фото. (10 баллов)
+Дополнить исходный проект дополнительным функционалом на выбор из тех, которые перечислены в описании задания, или придуманным вами самостоятельно. В качестве дополнительного функционала реализован сброс фильтров кликом на кнопку и перелистывание фото (10 баллов)`);
